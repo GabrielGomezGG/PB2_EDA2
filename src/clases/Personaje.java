@@ -1,3 +1,5 @@
+//Esta clase representa al gerrero. 
+
 package clases;
 
 public class Personaje extends Skin {
@@ -13,11 +15,12 @@ public class Personaje extends Skin {
 	}
 	
 	public void subirNivel(){
-		vida+=20;
+		vida+=10;
 		ataque+=5;
 		nivel++;
 	}
 	
+	//El personaje sube de lv cada vez que mata un enemigo
 	@Override
 	public Boolean atacar(Skin recive){
 		if(conVida && recive.conVida){
@@ -25,10 +28,15 @@ public class Personaje extends Skin {
 			
 			if(recive.vida <= 0){
 				recive.conVida = false;
+				subirNivel();
 			}
 			return true;
 		}
 		return false;
+	}
+	
+	public Integer getNivel(){
+		return nivel;
 	}
 	
 }

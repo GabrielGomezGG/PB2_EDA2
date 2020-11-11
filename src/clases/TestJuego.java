@@ -15,6 +15,7 @@ public class TestJuego {
 		pj1.atacar(g1);
 		pj1.atacar(g1);
 		pj1.atacar(g1);
+		//pj1.atacar(g1); al 4to ataque muere el dragon
 		
 		assertTrue(g1.getConVida());
 	}
@@ -25,8 +26,8 @@ public class TestJuego {
 		
 		Juego juego = new Juego();
 		
-		assertFalse(juego.agregarPersonajes(0));
-		assertTrue(juego.agregarPersonajes(5));
+		assertFalse(juego.agregarPersonajes(0));//no agrega ningun personaje
+		assertTrue(juego.agregarPersonajes(5));//agrego 5 personajes
 	}
 		
 	@Test

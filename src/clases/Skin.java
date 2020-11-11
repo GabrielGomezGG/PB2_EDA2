@@ -31,4 +31,8 @@ public class Skin {
 	public Integer getVida(){
 		return this.vida;
 	}
+	
+	public Integer getAtaque(){
+		return this.ataque;
+	}
 }
